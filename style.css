@@ -1,0 +1,236 @@
+body{
+  margin: 0;
+  padding: 0;
+  font: 1em sans-serif;
+  background-image: url("images/cosmos.jpg");
+  -o-background-size: cover;
+     background-size: cover;
+}
+
+.earth {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  z-index: 1;
+}
+
+.earth::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.earth > div {
+  width: 200%;
+  height: 100%;
+  -webkit-animation: spin 60s linear infinite;
+     -moz-animation: spin 60s linear infinite;
+       -o-animation: spin 60s linear infinite;
+          animation: spin 60s linear infinite;
+  background: url("images/640px-Earthmap1000x500compac.jpg") repeat-x;
+  -o-background-size: cover;
+     background-size: cover;
+}
+
+.moon {
+  position: absolute; 
+  top: 40%;
+  left: 50%; 
+  margin: auto;
+  overflow: hidden;  
+  border-radius: 50%;  
+  box-shadow: 0 0 20px 20px #000 inset, 0 0 20px 2px #000;
+  -webkit-animation: orbit 30s linear infinite;
+     -moz-animation: orbit 30s linear infinite;
+       -o-animation: orbit 30s linear infinite;
+          animation: orbit 30s linear infinite;
+  z-index: 0;
+}
+
+.moon::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -20px -20px 50px 2px #000 inset;
+  border-radius: 50%;
+}
+
+.moon > div {
+  width: 200%;
+  height: 100%;
+  -webkit-animation: spin 20s linear infinite;
+     -moz-animation: spin 20s linear infinite;
+       -o-animation: spin 20s linear infinite;
+          animation: spin 20s linear infinite;
+  background: url("images/55601938-seamless-texture-surface-of-the-moon-high-resolution.jpg") repeat-x;
+  -o-background-size: cover;
+     background-size: cover;
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@-moz-keyframes spin {
+  to {
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@-o-keyframes spin {
+  to {
+    -webkit-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+         -o-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@-webkit-keyframes orbit {
+  0%{
+    width: 50px;
+    height: 50px;
+  }
+  24%{
+    z-index: 0;
+  }
+  25%{
+    z-index: 2;
+    left: 80%;
+  }
+  50%{
+    width: 150px;
+    height: 150px;
+  }
+  74%{
+    z-index: 2;
+  }
+  75%{
+    z-index: 0;
+    left: 20%;
+  }
+  100%{
+    width: 50px;
+    height: 50px;
+    left: 50%;
+  }
+}
+
+@-moz-keyframes orbit {
+  0%{
+    width: 50px;
+    height: 50px;
+  }
+  24%{
+    z-index: 0;
+  }
+  25%{
+    z-index: 2;
+    left: 80%;
+  }
+  50%{
+    width: 150px;
+    height: 150px;
+  }
+  74%{
+    z-index: 2;
+  }
+  75%{
+    z-index: 0;
+    left: 20%;
+  }
+  100%{
+    width: 50px;
+    height: 50px;
+    left: 50%;
+  }
+}
+
+@-o-keyframes orbit {
+  0%{
+    width: 50px;
+    height: 50px;
+  }
+  24%{
+    z-index: 0;
+  }
+  25%{
+    z-index: 2;
+    left: 80%;
+  }
+  50%{
+    width: 150px;
+    height: 150px;
+  }
+  74%{
+    z-index: 2;
+  }
+  75%{
+    z-index: 0;
+    left: 20%;
+  }
+  100%{
+    width: 50px;
+    height: 50px;
+    left: 50%;
+  }
+}
+
+@keyframes orbit {
+  0%{
+    width: 50px;
+    height: 50px;
+  }
+  24%{
+    z-index: 0;
+  }
+  25%{
+    z-index: 2;
+    left: 80%;
+  }
+  50%{
+    width: 150px;
+    height: 150px;
+  }
+  74%{
+    z-index: 2;
+  }
+  75%{
+    z-index: 0;
+    left: 20%;
+  }
+  100%{
+    width: 50px;
+    height: 50px;
+    left: 50%;
+  }
+}
